@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Main Page</title>
+  <link rel="stylesheet" href="/cssfiles/global.css">
+</head>
+
+<body>
+  <!-- MAIN DIVISION -->
+  <div class="mainDivision" id="main_div_id">
+    <!-- NAVBAR DIVISION STARTED -->
+    <div class="NavBar" id="NavBar_id">
+      <nav>
+        <ul>
+          <li><a href="#log" class="SignIn">Login</a></li>
+          <li><a href="#TvShows">TV Shows</a></li>
+          <li><a href="#Movies">Movies</a></li>
+        </ul>
+      </nav>
+
+      <navleft>
+        <ul>
+          <li><a href="#logo">L O G O</a></li>
+          <li><a href="#EEE" onclick="SidebarOpen()">EEE</a></li>
+        </ul>
+      </navleft>
+    </div>
+    <!-- NAVBAR ENDED -->
+    <h1 style="color: beige; margin: 50px;"> Hello World!</h1>
+  </div>
+  <!-- MAIN ENDED -->
+
+
+  <!-- Division Side Bar -->
+  <div class="SideBar" id="SideBar_id">
+    <side>
+      <ul class="closeBtn"> <a onclick="SideBarClose()"> X </a> </ul>
+      <ul>
+        <li><a href="#Movies">Movies</a></li>
+        <li><a href=" #tv">TvShows</a></li>
+        <li><a href="#Awards">Events</a></li>
+        <li><a href="#BoxOffice">Box Office</a></li>
+        <li><a href="#About">About</a></li>
+      </ul>
+    </side>
+  </div>
+  <!-- Division Side Bar Ended -->
+
+  <!-- SCRIPT -->
+  <script>
+    function SidebarOpen() {
+      let x = document.getElementById('SideBar_id');
+      let y = document.getElementById('main_div_id');
+      x.style.width = "13%";
+      x.style.display = "block";
+      y.style.width = "87%";
+      y.style.transition = "width 2s";
+    }
+
+    function SideBarClose() {
+      let x = document.getElementById('SideBar_id');
+      let y = document.getElementById('main_div_id');
+      x.style.width = "0%";
+      x.style.display = "none";
+      y.style.width = "100%";
+    }
+  </script>
+</body>
+
+</html>
